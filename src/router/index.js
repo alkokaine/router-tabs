@@ -102,24 +102,84 @@ const routes = [
             }
           },
         ]
-      }
+      },
+      {
+        name: 'sub-event-3',
+        path: 'sub-event-3',
+        component: HelloWorld,
+        props: {
+          header: 'SUB EVENT 3'
+        }
+      },
     ]
   },
   {
     path: '/meeting',
-    name: 'meeting'
+    name: 'meeting',
+    component: HelloWorld,
+    props: {
+      header: 'Meeting view'
+    },
+    children: [
+      {
+        name: 'sub-meeting-1',
+        path: 'sub-meeting-1',
+        component: HelloWorld,
+        props: {
+          header: 'SUB MEETING 1'
+        }
+      },
+      {
+        name: 'sub-meeting-2',
+        path: 'sub-meeting-2',
+        component: HelloWorld,
+        props: {
+          header: 'SUB MEETING 2'
+        }
+      },
+      {
+        name: 'sub-meeting-3',
+        path: 'sub-meeting-3',
+        component: HelloWorld,
+        props: {
+          header: 'SUB MEETING 3'
+        }
+      }
+    ]
   },
   {
     path: '/b-trip',
-    name: 'b-trip'
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    name: 'b-trip',
+    component: HelloWorld,
+    props: {
+      header: 'Bad (Business) Trip View'
+    },
+    children: [
+      {
+        name: 'sub-b-trip-1',
+        path: 'sub-b-trip-1',
+        component: HelloWorld,
+        props: {
+          header: 'SUB Bad (Business) Trip 1'
+        }
+      },
+      {
+        name: 'sub-b-trip-2',
+        path: 'sub-b-trip-2',
+        component: HelloWorld,
+        props: {
+          header: 'SUB Bad (Business) Trip 2'
+        }
+      },
+      {
+        name: 'sub-b-trip-3',
+        path: 'sub-b-trip-3',
+        component: HelloWorld,
+        props: {
+          header: 'SUB Bad (Business) Trip 3'
+        }
+      }
+    ]
   }
 ]
 
