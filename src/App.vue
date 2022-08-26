@@ -5,7 +5,7 @@
         <p>{{ selected.text }}</p>
         <router-link class="nav-link px-2" v-for="item in selected.children" :key="item.path" :to="{ name: item.path }">{{ item.text }}</router-link>
       </div>
-      <router-link class="nav-link px-2" v-for="(item) in menulist" :key="item.path" :to="item.path" @click.capture.native="setselected($event, item)">{{ item.text }}</router-link>
+      <router-link class="nav-link px-2" v-for="item in menulist" :key="item.path" :to="item.path" @click.capture.native="setselected($event, item)">{{ item.text }}</router-link>
     </nav>
     <router-view class="container col col-6"/>
   </div>
